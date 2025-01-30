@@ -728,6 +728,7 @@ class IngredientsList extends React.Component {
 };
 */
 
+/*
 const IngredientsList = (props) =>
   React.createElement(
     "ul",
@@ -736,3 +737,185 @@ const IngredientsList = (props) =>
       React.createElement("li", { key: i }, ingredient)
     )
   );
+*/
+
+/*
+const IngredientsList = ({ item }) =>
+  React.createElement(
+    "ul",
+    { className: "ingredients" },
+    items.map((ingredient, i) =>
+      React.createElement("li", { key: i }, ingredient)
+    )
+  );
+*/
+
+/*
+<ul>
+  <li class="smile">smile</li>
+  <li class="smile">smile</li>
+  <li class="frown">frown</li>
+  <li class="smile">smile</li>
+  <li class="frown">frown</li>
+</ul>;
+*/
+
+/*
+React.DOM.h1(null, 'Baked Salmon')
+*/
+
+/*
+React.DOM.ul({"className": 'ingredients'},
+	React.DOM.li(null, "1 lb Salmon"),
+	React.DOM.li(null, "1 cup Pine Nuts"),
+	React.DOM.li(null, "2 cups Butter Lettuce"),
+	React.DOM.li(null, "1 Yellow Squash"),
+	React.DOM.li(null, "1/2 cup Olive Oil"),
+	React.DOM.li(null, "3 cloves of Garlic"),
+)
+*/
+
+/*
+let items = [
+  "1 lb Salmon",
+  "1 cup Pine Nuts",
+  "2 cups Butter Lettuce",
+  "1 Yellow Squash",
+  "1/2 cup Olive Oil",
+  "3 cloves of Garlic",
+];
+let list = React.DOM.ul(
+  { className: "ingredients" },
+  items.map((ingredient, key) => React.DOM.li({ key }, ingredient))
+);
+ReactDOM.render(list, document.getElementById("react-container"));
+*/
+
+/*
+const { render } = ReactDOM;
+
+const IngredientsList = ({ list }) =>
+  React.createElement(
+    "ul",
+    null,
+    list.map((ingredient, i) =>
+      React.createElement("li", { key: i }, ingredient)
+    )
+  );
+
+const ingredients = React.createFactory(IngredientsList);
+
+const list = [
+  "1 lb Salmon",
+  "1 cup Pine Nuts",
+  "2 cups Butter Lettuce",
+  "1 Yellow Squash",
+  "1/2 cup Olive Oil",
+  "3 cloves of Garlic",
+];
+
+render(ingredients({ list }), document.getElementById("react-container"));
+*/
+
+/*
+<ul>
+  <li>1 lb Salmon</li> <li></li>
+  <li>1 cup Pine Nuts</li>
+  <li>2 cups Butter Lettuce</li>
+  <li>1 Yellow Squash</li>
+  <li>1/2 cup Olive Oil</li>
+  <li>3 cloves of Garlic</li>
+</ul>;
+*/
+
+/*
+React.createElement(IngredientsList,{list:[...]});
+<IngredientsList list={[...]}/>
+*/
+
+/*
+<IngredientsList>
+  <ingredient />
+  <ingredient />
+  <ingredient />
+</IngredientsList>;
+*/
+
+/*
+<h1 className="fancy">Baked Salmon</h1>;
+<h1>{this.PaymentResponse.title}</h1>;
+<input type="checkbox" defaultChecked={false} />;
+*/
+
+/*
+<h1>{"Hello" + this.props.title}</h1>
+<h1>{this.props.title.toLowerCase().replace}</h1>
+function appendTitle({this.props.title}) {
+console.log(`${this.props.title} is great!`)
+}
+*/
+
+/*
+<ul>
+  {this.PaymentResponse.ingredients.map((ingredient, i) => (
+    <li key={i}>{ingredient}</li>
+  ))}
+</ul>;
+*/
+
+/*
+let data = [
+  {
+    name: "Baked Salmon",
+    ingredients: [
+      { name: "Salmon", amount: 1, measurement: "1 1B" },
+      { name: "Pine Nuts", amount: 1, measurement: "cup" },
+      { name: "Butter Lettuce", amount: 2, measurement: "cups" },
+      { name: "Yellow Squash", amount: 1, measurement: "med" },
+      { name: "Olive Oil", amount: 0.5, measurement: "cup" },
+      { name: "Garlic", amount: 3, measurement: "cloves" },
+    ],
+    steps: [
+      "Preheat the oven to 350 degrees.",
+      "Spread the olive oil around a glass baking dish.",
+      "Add the salmon, garlic, and pine nuts to the dish.",
+      "Bake for 15 minutes.",
+      "Add the yellow squash and put back in the oven for 30 mins.",
+      "Remove from oven and let cool for 15 minutes. Add the lettuce and serve.",
+    ],
+  },
+  {
+    name: "Fish Tacos",
+    ingredients: [
+      { name: "Whitefish", amount: 1, measurement: "1 1b" },
+      { name: "Chesse", amount: 1, measurement: "cup" },
+      { name: "Iceberg Lettuce", amount: 2, measurement: "cups" },
+      { name: "Tomatoes", amount: 1, measurement: "large" },
+    ],
+		'ssteps': [
+			"Cook the fish on the grill until hot.",
+			"Place the fish on the 3 tortillas.",
+			"Top them with lettuce, tomatoes, and cheese."
+		]
+  },
+];
+*/
+
+// Данные, массив объектов приложения Recipes
+var data = [ ... ];
+// Функциональный компонент, не имеющий состояния, предназначенный
+// для отдельно взятого рецепта приложения Recipes
+const Recipe = (props) => (
+...
+)
+
+// Функциональный компонент, не имеющий состояния,
+// предназначенный для меню из рецептов
+const Menu = (props) => (
+	...
+	)
+	// Вызов ReactDOM.render для отображения Menu в текущей DOM-модели
+	ReactDOM.render(
+	<Menu recipes={data} title="Delicious Recipes" />,
+	document.getElementById("react-container")
+	)
