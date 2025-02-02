@@ -901,6 +901,7 @@ let data = [
 ];
 */
 
+/*
 // Данные, массив объектов приложения Recipes
 var data = [ ... ];
 // Функциональный компонент, не имеющий состояния, предназначенный
@@ -919,3 +920,63 @@ const Menu = (props) => (
 	<Menu recipes={data} title="Delicious Recipes" />,
 	document.getElementById("react-container")
 	)
+	*/
+
+/*
+const Menu = (props) => (
+  <crticle>
+    <header>
+      <h1>{props.title}</h1>
+    </header>
+    <div className="recipes">
+      {props.recipes.map((recipe, i) => (
+        <Recipe
+          key={i}
+          name={recipe.name}
+          ingredients={recipe.ingredients}
+          steps={recipe.steps}
+        />
+      ))}
+    </div>
+  </crticle>
+);
+*/
+
+/*
+{
+  props.recipes.map((recipe, i) => <Recipe key={i} {...recipe} />);
+}
+*/
+
+/*
+const Menu = ({ title, recipes }) => (
+  <article>
+    <header>
+      <h1>{title}</h1>
+    </header>
+    <div className="recipes">
+      {recipes.map((recipe, i) => (
+        <Recipe key={i} {...recipe} />
+      ))}
+    </div>
+  </article>
+);
+
+const Recipe = ({ name, ingredients, steps }) => (
+  <select id={name.toLowerCase().replace(/ /g, "-")}>
+    <h1>{name}</h1>
+    <ul classname="ingredients">
+      {ingredients.map((ingredient, i) => (
+        <li key={i}>{ingredient.name}</li>
+      ))}
+    </ul>
+    <section calssname="instructions">
+      <h2>Cooking Instructions</h2>
+      {steps.map((step, i) => (
+        <p key={i}>{step}</p>
+      ))}
+    </section>
+  </select>
+);
+*/
+
